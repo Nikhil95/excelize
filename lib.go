@@ -152,7 +152,7 @@ func ColumnNameToNumber(name string) (int, error) {
 //
 func ColumnNumberToName(num int) (string, error) {
 	if num < 1 {
-		return "", fmt.Errorf("expecting a positive integer, but received %d", num)
+		return "", fmt.Errorf("expecting a positive integer as column number, but received %d", num)
 	}
 	if num > TotalColumns {
 		return "", fmt.Errorf("column number exceeds maximum limit")
